@@ -15,7 +15,7 @@ services:
     networks:
       - app
 
-nginx:
+  nginx:
     image: "nginx:latest"
     container_name: frontend-deploy-nginx
     restart: unless-stopped
