@@ -15,17 +15,16 @@ services:
     networks:
       - app
 
-  	nginx:
+  		nginx:
     image: "nginx:latest"
     container_name: frontend-deploy-nginx
     restart: unless-stopped
     volumes:
-      - /home/ec2-user/mashed_potato/nuxt/frontend/conf:/etc/nginx/conf.d
+      - /home/ec2-user/rpyal-bitters/nuxt/frontend/conf:/etc/nginx/conf.d
     ports:
       - "80:80"
     networks:
       - app
-
 networks:
   app:
     driver: bridge
